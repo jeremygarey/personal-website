@@ -21,8 +21,8 @@ const firebaseConfig = {
 }
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig)
-const analytics = getAnalytics(app)
+const firebaseApp = initializeApp(firebaseConfig)
+const analytics = getAnalytics(firebaseApp)
 
 const app = createApp(App)
 
