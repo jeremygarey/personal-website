@@ -1,13 +1,21 @@
 <script setup>
 import GPT from '../components/GPT.vue'
+import BaseChat from '../components/BaseChat.vue'
 </script>
 
 <template>
-    <div class="space-y-4">
-        <h1 class="text-3xl font-bold">NanaGPT</h1>
-        <GPT
-            name="Nana"
-            api-url="https://us-central1-family-gpt.cloudfunctions.net/nanaGPT"
-        />
-    </div>
+    <base-chat name="Nana">
+        <template #profile-pic>
+            <img
+                src="../assets/nana-profile.png"
+                class="rounded-full h-12 w-12"
+            />
+        </template>
+        <template #content>
+            <GPT
+                name="Nana"
+                api-url="https://us-central1-family-gpt.cloudfunctions.net/nanaGPT"
+            />
+        </template>
+    </base-chat>
 </template>

@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flex-col h-[80vh] overflow-scroll">
-        <div>
+    <div class="h-[90svh] overflow-scroll p-3">
+        <div class="flex flex-col justify-end min-h-full pt-24">
             <div v-for="(item, index) in responses" :key="index">
                 <div class="mb-2">
                     <div class="flex justify-end">
@@ -22,17 +22,23 @@
             </div>
         </div>
     </div>
-    <div class="border-2 border-zinc-800 rounded-lg p-1 px-2 flex mt-0">
+    <div class="border-2 border-zinc-800 rounded-lg p-1 px-2 flex mx-3 mt-2">
         <input
             type="text"
             class="bg-transparent block grow focus:outline-none"
             v-model="inputText"
             :placeholder="`Message ${name}`"
+            @keyup.enter="fetchData"
         />
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            class="w-6 h-6 fill-blue-500 hover:fill-blue-400"
+            class="w-6 h-6 fill-blue-500"
+            :class="
+                inputText
+                    ? 'fill-blue-500 hover:fill-blue-400'
+                    : 'fill-zinc-700'
+            "
             @click="fetchData"
         >
             <path
@@ -60,20 +66,26 @@ export default {
     },
     methods: {
         fetchData() {
-            axios
-                .post(this.apiUrl, {
-                    message: this.inputText,
+            if (this.inputText) {
+                this.responses.push({
+                    question: this.inputText,
+                    response: '...',
                 })
-                .then((response) => {
-                    this.responses.push({
-                        question: this.inputText,
-                        response: response.data,
+                axios
+                    .post(this.apiUrl, {
+                        message: this.inputText,
                     })
-                    this.inputText = ''
-                })
-                .catch((error) => {
-                    console.error('Error fetching data:', error)
-                })
+                    .then((response) => {
+                        this.responses[this.responses.length - 1] = {
+                            question: this.inputText,
+                            response: response.data,
+                        }
+                        this.inputText = ''
+                    })
+                    .catch((error) => {
+                        console.error('Error fetching data:', error)
+                    })
+            }
         },
     },
 }
