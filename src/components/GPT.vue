@@ -1,25 +1,27 @@
 <template>
     <div class="h-[90svh] overflow-scroll p-3">
         <div class="flex flex-col justify-end min-h-full pt-24">
-            <div v-for="(item, index) in responses" :key="index">
-                <div class="mb-2">
-                    <div class="flex justify-end">
-                        <div
-                            class="max-w-[75%] inline-block bg-blue-500 rounded-xl px-3 py-2"
-                        >
-                            {{ item.question }}
+            <TransitionGroup name="list" tag="div">
+                <div v-for="(item, index) in responses" :key="index">
+                    <div class="mb-2">
+                        <div class="flex justify-end">
+                            <div
+                                class="max-w-[75%] inline-block bg-blue-500 rounded-xl px-3 py-2"
+                            >
+                                {{ item.question }}
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="flex justify-start mt-2">
-                        <div
-                            class="max-w-[75%] inline-block bg-zinc-700 rounded-2xl px-3 py-2"
-                        >
-                            {{ item.response }}
+                        <div class="flex justify-start mt-2">
+                            <div
+                                class="max-w-[75%] inline-block bg-zinc-700 rounded-2xl px-3 py-2"
+                            >
+                                {{ item.response }}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </TransitionGroup>
         </div>
     </div>
     <div class="border-2 border-zinc-800 rounded-lg p-1 px-2 flex mx-3 mt-2">
@@ -91,3 +93,20 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+.list-move,
+.list-enter-active,
+.list-leave-active {
+    transition: all 0.2s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+    opacity: 0;
+}
+
+.list-leave-active {
+    position: absolute;
+}
+</style>
