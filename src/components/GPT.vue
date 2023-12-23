@@ -69,18 +69,19 @@ export default {
             if (this.inputText) {
                 this.responses.push({
                     question: this.inputText,
-                    response: '...',
+                    response: `${this.name} is typing...`,
                 })
+                const currentQuestion = this.inputText
+                this.inputText = ''
                 axios
                     .post(this.apiUrl, {
-                        message: this.inputText,
+                        message: currentQuestion,
                     })
                     .then((response) => {
                         this.responses[this.responses.length - 1] = {
-                            question: this.inputText,
+                            question: currentQuestion,
                             response: response.data,
                         }
-                        this.inputText = ''
                     })
                     .catch((error) => {
                         console.error('Error fetching data:', error)
