@@ -7,7 +7,7 @@ import BaseChat from '../components/BaseChat.vue'
     <base-chat name="Aunt Margo">
         <template #profile-pic>
             <img
-                src="../assets/margo-profile.png"
+                src="../assets/margo-profile.jpg"
                 class="rounded-full h-12 w-12"
             />
         </template>

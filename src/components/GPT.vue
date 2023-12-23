@@ -14,7 +14,7 @@
 
                         <div class="flex justify-start mt-2">
                             <div
-                                class="max-w-[75%] inline-block bg-zinc-700 rounded-2xl px-3 py-2"
+                                class="max-w-[75%] inline-block bg-zinc-700 rounded-xl px-3 py-2"
                             >
                                 {{ item.response }}
                             </div>
