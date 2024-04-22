@@ -1,31 +1,31 @@
-import './assets/main.css'
+import './assets/main.css';
 
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app'
-import { getAnalytics } from 'firebase/analytics'
+import { initializeApp } from 'firebase/app';
+import { getAnalytics } from 'firebase/analytics';
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: 'AIzaSyD7mFnPaePRbECc9k4mTkB3l-Ilu21Bd5Y',
-    authDomain: 'family-gpt.firebaseapp.com',
-    projectId: 'family-gpt',
-    storageBucket: 'family-gpt.appspot.com',
-    messagingSenderId: '970027000660',
-    appId: '1:970027000660:web:a54a2da76a2628ddb89ec1',
-    measurementId: 'G-MZZ3RED0P0',
-}
+    apiKey: 'AIzaSyDierwXk89qMbJdJWhgjUnt_XMdqeN7emw',
+    authDomain: 'personal-website-6887e.firebaseapp.com',
+    projectId: 'personal-website-6887e',
+    storageBucket: 'personal-website-6887e.appspot.com',
+    messagingSenderId: '582284338316',
+    appId: '1:582284338316:web:286055b2614c9ca185c7a9',
+    measurementId: 'G-V1BG70H2JS',
+};
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig)
-const analytics = getAnalytics(firebaseApp)
+const firebaseApp = initializeApp(firebaseConfig);
+const analytics = getAnalytics(firebaseApp);
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(router)
+app.use(router);
 
-app.mount('#app')
+app.mount('#app');

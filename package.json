@@ -1,10 +1,11 @@
 {
-    "name": "fam-gpt-ui",
+    "name": "personal-website",
     "private": true,
-    "version": "0.0.0",
+    "version": "1.0.0",
     "type": "module",
     "scripts": {
         "dev": "vite",
+        "dev:host": "vite --host",
         "build": "vite build",
         "preview": "vite preview"
     },
