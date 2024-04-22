@@ -185,24 +185,27 @@
                     </Transition>
                 </div>
                 <div class="text-center pb-12">
-                    <div class="font-bold text-4xl text-black">
-                        Jeremy Garey
-                    </div>
-                    <p class="text-blue-600 mt-2">
+                    <div class="font-bold text-4xl text-black">Oh hey</div>
+                    <p class="text-blue-600 mt-2 font-medium">
                         Hang tight. Website coming soon.
                     </p>
                 </div>
             </div>
-            <div class="h-40 text-white flex justify-center items-center">
+            <div
+                class="h-40 text-white flex justify-center items-center container px-4"
+            >
                 <div class="text-center">
-                    <p class="text-lg font-semibold">hey there 👋🏻</p>
+                    <p class="text-lg font-semibold">thanks for visiting 👋🏻</p>
+                    <p class="text-xs mt-1"></p>
                     <p class="text-xs mt-1">
-                        you should totally check out
+                        no, i don't actually have a pair of $4000 tech goggles.
+                        yes, i think this page is funnier than it actually is.
+                        and yes, you should totally go check out
                         <a
-                            class="text-blue-400"
+                            class="text-blue-400 font-semibold"
                             href="https://vsco.co/jeremygarey/gallery"
                             >my vsco</a
-                        >. it's pretty fun
+                        >
                     </p>
                 </div>
             </div>
