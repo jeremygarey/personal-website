@@ -31,7 +31,7 @@
                     <a
                         href="https://www.youtube.com/@jeremyondrums"
                         target="_blank"
-                        class="px-2 py-1 bg-red-100 text-red-700 rounded-md flex gap-2 items-center justify-center"
+                        class="px-2 py-3 bg-red-100 text-red-700 rounded-lg flex gap-2 items-center justify-center"
                     >
                         <div
                             class="w-5 h-5 rounded-full bg-cover bg-right"
@@ -44,7 +44,7 @@
                     <a
                         href="https://www.tiktok.com/@jeremygarey"
                         target="_blank"
-                        class="px-2 py-1 bg-emerald-100 text-emerald-700 rounded-md flex gap-2 items-center justify-center"
+                        class="px-2 py-3 bg-emerald-100 text-emerald-700 rounded-lg flex gap-2 items-center justify-center"
                     >
                         <div
                             class="w-5 h-5 rounded-full bg-cover bg-right"
@@ -57,7 +57,7 @@
                     <a
                         href="https://www.instagram.com/jeremyondrums"
                         target="_blank"
-                        class="px-2 py-1 bg-fuchsia-100 text-fuchsia-700 rounded-md flex gap-2 items-center justify-center"
+                        class="px-2 py-3 bg-fuchsia-100 text-fuchsia-700 rounded-lg flex gap-2 items-center justify-center"
                     >
                         <div
                             class="w-5 h-5 rounded-full bg-cover bg-right"
