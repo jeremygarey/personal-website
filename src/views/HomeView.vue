@@ -91,7 +91,7 @@
                 >.
             </p>
             <div>
-                <p>Last thing - here's my IG and VSCO :)</p>
+                <p>Last thing - here's my IG and VSCO</p>
                 <div class="grid grid-cols-2 gap-2 text-sm mt-4">
                     <a
                         href="https://www.instagram.com/jeremy.garey"
